@@ -3,36 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissord Game</title>
+    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rock Paper Scissors</h1>
-    <div class="choices">
-        <div class="choice" id="rock">
-            <img src="./images/rock.png" alt="Rock"/>
-        </div>
-        <div class="choice" id="paper">
-            <img src="./images/paper.png" alt="Paper"/>
-        </div>
-        <div class="choice" id="scissors">
-            <img src="./images/scissors.png" alt="Scissors"/>
-        </div>
-    </div>
+    <div class="container">
+        <header>
+            <h1>Rock Paper Scissors</h1>
+            <p class="subtitle">First to 5 wins!</p>
+        </header>
 
-    <div class="score-board">
-        <div class="score">
-            <p id="userscore">0</p>
-            <p>You</p>
+        <div class="score-board">
+            <div class="player-score">
+                <span class="score-label">You</span>
+                <span class="score-value" id="userscore">0</span>
+            </div>
+            <div class="divider">:</div>
+            <div class="player-score">
+                <span class="score-value" id="computerscore">0</span>
+                <span class="score-label">Computer</span>
+            </div>
         </div>
-        <div class="score">
-            <p id="computerscore">0</p>
-            <p>comp</p>
-        </div>
-    </div>
 
-    <div class="msg-container">
-        <p id = "msg">Play your move</p>
+        <div class="game-result">
+            <div class="move-display">
+                <div class="player-move">
+                    <span class="move-label">You</span>
+                    <div class="move-icon" id="player-move">?</div>
+                </div>
+                <div class="vs">VS</div>
+                <div class="player-move">
+                    <span class="move-label">Computer</span>
+                    <div class="move-icon" id="computer-move">?</div>
+                </div>
+            </div>
+            <p id="msg" class="message">Choose your move</p>
+        </div>
+
+        <div class="choices">
+            <button class="choice" id="rock" aria-label="Rock">
+                <img src="./images/rock.png" alt="Rock"/>
+                <span>Rock</span>
+            </button>
+            <button class="choice" id="paper" aria-label="Paper">
+                <img src="./images/paper.png" alt="Paper"/>
+                <span>Paper</span>
+            </button>
+            <button class="choice" id="scissors" aria-label="Scissors">
+                <img src="./images/scissors.png" alt="Scissors"/>
+                <span>Scissors</span>
+            </button>
+        </div>
+
+        <button class="reset-btn" id="reset">Reset Game</button>
     </div>
 
     <script src="app.js"></script>
